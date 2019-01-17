@@ -49,3 +49,15 @@ function solution(num) {
 }
 
 solution(57);
+
+
+
+
+
+// Delete occurrences of an element if it occurs more than n times
+
+
+
+function deleteNth(arr,n){
+    // ...
+  }
