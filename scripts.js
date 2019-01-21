@@ -58,6 +58,16 @@ solution(57);
 
 
 
+
 function deleteNth(arr,n){
     // ...
+  
+    let filtered = []
+    let occurances = {}
+  
+   for (let i = 0; i < arr.length; i++){
+     let ele = arr[i]
+    
+   }
+  
   }
