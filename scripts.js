@@ -59,15 +59,31 @@ solution(57);
 
 
 
-function deleteNth(arr,n){
+function deleteNth(arr, n) {
     // ...
   
-    let filtered = []
-    let occurances = {}
+    let nums = []
+    let occurences = {}
   
-   for (let i = 0; i < arr.length; i++){
-     let ele = arr[i]
-    
-   }
+    for (let i = 0; i < arr.length; i++) {
+      let element = arr[i]
+  
+      if (!occurences[element]) {
+        occurences[element] = 1;
+        console.log(occurences[element])
+        console.log(occurences, "this is the first IF");
+        
+      } else {
+        occurences[element] += 1;
+        console.log(occurences, "This is the SECOND IF");
+      }
+      if (occurences[element] <= n) {
+          nums.push(element);
+          console.log(occurences, "THE FINAL IF");
+          console.log(nums, "the nums")
+      }
+    }
+    return nums;
   
   }
+  
