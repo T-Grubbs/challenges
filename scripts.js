@@ -22,6 +22,7 @@ sockMerchant = (n, ar) => {
 
 function solution(num) {
 	// convert the number to a roman numeral
+  // create object with keys to equal the digital number
 	var romanToNum = {
 		M: 1000,
 		CM: 900,
@@ -37,11 +38,23 @@ function solution(num) {
 		IV: 4,
 		I: 1
 	};
+  // since Roman numuerals are letters, create an empty //string to add letters together
+
+
 	var roman = '';
 	for (let key in romanToNum) {
+  // loops through the object ..
+
 		while (num >= romanToNum[key]) {
+  //as long as the num (57 )is >= the value of key in the //object, 57 is greater than L but less than XC.
+  //the forWhile loop stops at 50 in this case
+
 			roman += key;
+  //add the key into the empty string ('' + L)
 			num -= romanToNum[key];
+  //subtract the value of the key from the number (57-50)
+  //now num equals 7
+
 		}
 	}
 
